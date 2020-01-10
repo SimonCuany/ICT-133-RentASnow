@@ -6,6 +6,11 @@ require_once 'model/model.php';
 function home()
 {
     $news = getNews();
-    require_once 'view/home.php';
+    require_once 'C:\xampp\ICT133\ICT-133\ICT-133-RentASnow\view\home.php';
+}
+function snowboard()
+{
+    $snowboard = getsnowboard();
+    require_once 'C:\xampp\ICT133\ICT-133\ICT-133-RentASnow\view\snowboard.php';
 }
 ?>
