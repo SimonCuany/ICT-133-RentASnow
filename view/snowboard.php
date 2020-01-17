@@ -7,11 +7,15 @@
  */
 
 ob_start();
+?>
+<h1>Liste des snowboards</h1>
+<?php foreach ($Snows as $onesnow) { ?>
+    <?= $onesnow['modele'] ?><br>
+    <?= $onesnow['marque'] ?><br>
 
-echo "test";
-
-
-
+    <?php
+}
 $content = ob_get_clean();
+require "view/gabarit.php"
 ?>
 

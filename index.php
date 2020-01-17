@@ -27,4 +27,5 @@ switch ($action) {
         require_once 'view/home.php';
         break;
 }
+
 ?>

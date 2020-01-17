@@ -12,15 +12,15 @@ require_once 'model/model.php';
 function home()
 {
     $news = getNews();
-    require_once 'C:\xampp\ICT133\ICT-133\ICT-133-RentASnow\view\home.php';
+    require_once 'view/home.php';
 }
 function snowboard()
 {
-    $listSnows = getsnowboard();
-    require_once 'C:\xampp\ICT133\ICT-133\ICT-133-RentASnow\view\snowboard.php';
+    $Snows = getsnowboard();
+    require_once 'view/snowboard.php';
 }
 function login()
 {
-    require_once 'C:\xampp\ICT133\ICT-133\ICT-133-RentASnow\view\Login.php';
+    require_once 'view/Login.php';
 }
 ?>
