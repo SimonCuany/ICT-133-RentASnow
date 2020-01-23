@@ -57,7 +57,7 @@
                 </div>
             </div>
             <!-- Code pour le menu de navigation -->
-            <div align="right">
+            <div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light" >
 
                 <a class="navbar-brand">Menu</a>
@@ -81,7 +81,7 @@
                                 <?php if (isset($_SESSION['username'])) { ?>
                                 <a class="dropdown-item" href="index.php?action=disconnect">Déconnexion</a>
                                 <?php } else { ?>
-                                    <button style="border: none" onclick="document.getElementById('id01').style.display='block'" >Login</button>
+                                    <button class="btnlogin" onclick="document.getElementById('id01').style.display='block'" >Login</button>
                                 <?php } ?>
 
                             </div>

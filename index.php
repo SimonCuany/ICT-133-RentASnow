@@ -22,6 +22,9 @@ switch ($action) {
     case 'Login':
         login();
         break;
+    case 'DetailsSnow':
+        Details();
+        break;
     default :
         home();
         require_once 'view/home.php';

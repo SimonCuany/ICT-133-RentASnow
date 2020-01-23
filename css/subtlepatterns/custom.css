@@ -631,6 +631,9 @@ h6,.page-content h6 a {font-weight: normal; font-style: normal; font-family: 'So
     from {transform: scale(0)}
     to {transform: scale(1)}
 }
-
+.btnlogin {
+    background-color: white;
+    border: none;
+}
 
 

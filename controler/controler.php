@@ -23,4 +23,8 @@ function login()
 {
     require_once 'view/Login.php';
 }
+function Details()
+{
+    require_once 'view/SnowDetails.php';
+}
 ?>

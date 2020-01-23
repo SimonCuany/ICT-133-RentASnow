@@ -8,7 +8,7 @@
 
 ob_start();
 ?>
-<h1>Liste des snowboards</h1>
+<br><h1>Liste des snowboards</h1>
 <?php foreach ($Snows as $onesnow) { ?>
     <table class="table table-bordered">
         <th>Marque</th>
@@ -47,6 +47,8 @@ ob_start();
             <td>
                 <img src="<?= $onesnow['bigimage'] ?>" style="width: 150px ">
             </td>
+            <td><button type="button"><a href="index.php?action=DetailsSnow<?= $Snows['id']?>">Détails</button></td>
+
         </tr>
         </tbody>
     </table>
