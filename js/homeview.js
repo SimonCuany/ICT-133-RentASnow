@@ -10,3 +10,8 @@ function startCamera()
 $(document).ready( function() {
     startCamera()
 });
+
+
+var modal = document.getElementById('id01');
+
+

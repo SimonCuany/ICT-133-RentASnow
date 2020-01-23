@@ -56,22 +56,40 @@
                     <a href="index.php" id="divTagLine">La glisse à moindre coût</a>
                 </div>
             </div>
-            <div class="row">
-                <div class="container">
-                    <div class="btn btn-outline-success" style="background-color: whitesmoke">
-                        <!-- On commence par afficher les boutons qui s'afficheront, peu importe les événements-->
-                        <a href="index.php?action=home">Home</a>
-                        <a href="index.php?action=listSnows">Snows</a>
-                        <?php if (isset($_SESSION['username'])) { ?>
-                            <a href="index.php?action=disconnect">Déconnexion</a>
-                        <?php } else { ?>
-                            <a href="index.php?action=Login">Login</a>
-                        <?php } ?>
+            <!-- Code pour le menu de navigation -->
+            <div align="right">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" >
 
-                        </form>
-                    </div>
+                <a class="navbar-brand">Menu</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.php?action=home">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?action=listSnows">Snows</a>
+                        </li>
 
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Compte utilisateur
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <?php if (isset($_SESSION['username'])) { ?>
+                                <a class="dropdown-item" href="index.php?action=disconnect">Déconnexion</a>
+                                <?php } else { ?>
+                                    <button style="border: none" onclick="document.getElementById('id01').style.display='block'" >Login</button>
+                                <?php } ?>
+
+                            </div>
+                        </li>
+                    </ul>
                 </div>
+
+            </nav>
             </div>
         </div>
     </div>
