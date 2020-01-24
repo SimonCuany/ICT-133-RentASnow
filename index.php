@@ -25,6 +25,18 @@ switch ($action) {
     case 'DetailsSnow':
         Details();
         break;
+    case "TryLogin":
+        TryLogin();
+        break;
+    case "disconnect":
+        disconnect();
+        break;
+    case "register";
+        register();
+    break;
+    case "TryRegister":
+        tryregister();
+        break;
     default :
         home();
         require_once 'view/home.php';

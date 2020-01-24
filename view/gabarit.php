@@ -58,155 +58,140 @@
             </div>
             <!-- Code pour le menu de navigation -->
             <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-                <a class="navbar-brand">Menu</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.php?action=home">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php?action=listSnows">Snows</a>
-                        </li>
+                    <a class="navbar-brand">Menu</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.php?action=home">Home <span
+                                            class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.php?action=listSnows">Snows</a>
+                            </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Compte utilisateur
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <?php if (isset($_SESSION['username'])) { ?>
-                                <a class="dropdown-item" href="index.php?action=disconnect">Déconnexion</a>
-                                <?php } else { ?>
-                                    <button class="btnlogin" onclick="document.getElementById('id01').style.display='block'" >Login</button>
-                                <?php } ?>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Compte utilisateur
+                                </a>
 
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'"
-        class="close" title="Close Modal">&times;</span>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <?php if (isset($_SESSION['Name'])) { ?>
 
-                    <!-- Modal Content -->
-                    <div align="center">
-                        <form class="modal-content animate" action="/action_page.php">
-                            <div class="imgcontainer" align="center" style="padding: 10mm">
-                                <img src="view/images/img_avatar2.png" alt="Avatar" class="avatar">
-                            </div>
+                                        <a class="dropdown-item" href="index.php?action=disconnect">Déconnexion</a>
+                                    <?php } else { ?>
+                                        <a class="dropdown-item" href="index.php?action=Login">Login</a>
+                                    <?php } ?>
+                                    <a class="dropdown-item" href="index.php?action=register">Register</a>
 
-                            <div class="container">
-                                <label for="uname"><b>Username</b></label> <br><br>
-                                <input type="text" placeholder="Enter Username" name="uname" required><br>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <?= $_SESSION['Name']?>
+                    <div id="id01" class="modal">
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                          class="close" title="Close Modal">&times;</span>
 
-                                <br><label for="psw"><b>Password</b></label><br>
-                                <input type="password" placeholder="Enter Password" name="psw" required><br><br>
 
-                                <button type="submit">Login</button>
-                                <br>
-                                <label>
-                                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                                </label>
-                            </div>
+                        </div>
+                    </div>
 
-                            <div class="container" style="padding: 5mm">
-                                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger">Cancel</button>
-                                <span class="psw">Forgot <a href="#">password?</a></span>
-                            </div>
-                        </form>
+                </nav>
+
+            </div>
+        </div>
+
+        <div class="contentArea">
+            <div class="divPanel notop page-content">
+                <div class="row-fluid">
+                    <div class="span12" id="divMain">
+                        <?= $content; ?>
                     </div>
                 </div>
-
-            </nav>
+                <div id="footerInnerSeparator"></div>
             </div>
         </div>
-    </div>
 
-    <div class="contentArea">
-        <div class="divPanel notop page-content">
-            <div class="row-fluid">
-                <div class="span12" id="divMain">
-                    <?= $content; ?>
+        <div id="footerOuterSeparator"></div>
+
+        <div id="divFooter" class="footerArea">
+            <div class="divPanel">
+                <div class="row">
+                    <div class="col-4" id="footerArea1">
+                        <h3>Notre magasin</h3>
+                        <p>Nous sommes une équipe de jeunes snowboardeurs qui souhaitons faire découvrir cette
+                            discipline à
+                            tous les publics.</p>
+                        <p>
+                            <a href="#" title="Terms of Use">Terms of Use</a><br/>
+                            <a href="#" title="Privacy Policy">Privacy Policy</a><br/>
+                            <a href="#" title="FAQ">FAQ</a><br/>
+                            <a href="#" title="Sitemap">Sitemap</a>
+                        </p>
+                    </div>
+
+                    <div class="col-4" id="footerArea3">
+                        <h3>Horaires de location</h3>
+                        <p>Les locations peuvent s'effectuer tous les jours de la semaine en haute saison de 07h à 19h
+                            et en
+                            basse saison, les jours ouvrables de 8h à 18h.<br>
+                            Vous pouvez aussi passer par le site. Pour le retrait et le dépot, vous devrez passer au
+                            guichet
+                            automatique à l'arrière du magasin</p>
+                    </div>
+
+                    <div class="col-4" id="footerArea4">
+                        <h3>Contacts</h3>
+
+                        <ul id="contact-info">
+                            <li>
+                                <i class="general foundicon-phone icon"></i>
+                                <span class="field">Téléphone :</span>
+                                <br/>
+                                +41 27 890 12 34
+                            </li>
+                            <li>
+                                <i class="general foundicon-mail icon"></i>
+                                <span class="field">Email :</span>
+                                <br/>
+                                <a href="mailto:info@rentasnow.com" title="Email">info@rentasnow.com</a>
+                            </li>
+                            <li>
+                                <i class="general foundicon-home icon" style="margin-bottom:50px"></i>
+                                <span class="field">Addresse :</span>
+                                <br/>
+                                12 Rue de la Glisse<br/>
+                                2704 Sautons, Valais<br/>
+                                Suisse
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
-            </div>
-            <div id="footerInnerSeparator"></div>
-        </div>
-    </div>
+                <br/><br/>
 
-    <div id="footerOuterSeparator"></div>
-
-    <div id="divFooter" class="footerArea">
-        <div class="divPanel">
-            <div class="row">
-                <div class="col-4" id="footerArea1">
-                    <h3>Notre magasin</h3>
-                    <p>Nous sommes une équipe de jeunes snowboardeurs qui souhaitons faire découvrir cette discipline à
-                        tous les publics.</p>
-                    <p>
-                        <a href="#" title="Terms of Use">Terms of Use</a><br/>
-                        <a href="#" title="Privacy Policy">Privacy Policy</a><br/>
-                        <a href="#" title="FAQ">FAQ</a><br/>
-                        <a href="#" title="Sitemap">Sitemap</a>
-                    </p>
+                <div class="row text-center">
+                    <div class="copyright">Copyright © 2019 Rent A Snow. All Rights Reserved.</div>
                 </div>
-
-                <div class="col-4" id="footerArea3">
-                    <h3>Horaires de location</h3>
-                    <p>Les locations peuvent s'effectuer tous les jours de la semaine en haute saison de 07h à 19h et en
-                        basse saison, les jours ouvrables de 8h à 18h.<br>
-                        Vous pouvez aussi passer par le site. Pour le retrait et le dépot, vous devrez passer au guichet
-                        automatique à l'arrière du magasin</p>
-                </div>
-
-                <div class="col-4" id="footerArea4">
-                    <h3>Contacts</h3>
-
-                    <ul id="contact-info">
-                        <li>
-                            <i class="general foundicon-phone icon"></i>
-                            <span class="field">Téléphone :</span>
-                            <br/>
-                            +41 27 890 12 34
-                        </li>
-                        <li>
-                            <i class="general foundicon-mail icon"></i>
-                            <span class="field">Email :</span>
-                            <br/>
-                            <a href="mailto:info@rentasnow.com" title="Email">info@rentasnow.com</a>
-                        </li>
-                        <li>
-                            <i class="general foundicon-home icon" style="margin-bottom:50px"></i>
-                            <span class="field">Addresse :</span>
-                            <br/>
-                            12 Rue de la Glisse<br/>
-                            2704 Sautons, Valais<br/>
-                            Suisse
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-            <br/><br/>
-
-            <div class="row text-center">
-                <div class="copyright">Copyright © 2019 Rent A Snow. All Rights Reserved.</div>
-            </div>
-            <div class="row text-center">
-                <div class="social_bookmarks">
-                    <a href="#"><i class="social foundicon-facebook"></i> Facebook</a>
-                    <a href=""><i class="social foundicon-twitter"></i> Twitter</a>
-                    <a href="#"><i class="social foundicon-pinterest"></i> Pinterest</a>
-                    <a href="#"><i class="social foundicon-rss"></i> Rss</a>
+                <div class="row text-center">
+                    <div class="social_bookmarks">
+                        <a href="#"><i class="social foundicon-facebook"></i> Facebook</a>
+                        <a href=""><i class="social foundicon-twitter"></i> Twitter</a>
+                        <a href="#"><i class="social foundicon-pinterest"></i> Pinterest</a>
+                        <a href="#"><i class="social foundicon-rss"></i> Rss</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<br/><br/><br/>
+    <br/><br/><br/>
 
 </body>
 </html>

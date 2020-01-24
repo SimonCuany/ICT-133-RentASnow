@@ -513,12 +513,8 @@ h6,.page-content h6 a {font-weight: normal; font-style: normal; font-family: 'So
         border-radius: 50%;
     }
 
-    .container {
-        padding: 16px;
-    }
     span.psw {
-        float: right;
-        padding-top: 16px;
+
     }
     .modal {
         display: none; /* Hidden by default */
@@ -636,4 +632,9 @@ h6,.page-content h6 a {font-weight: normal; font-style: normal; font-family: 'So
     border: none;
 }
 
-
+.menusnow {
+    border: #dddddd;
+}
+.loginform{
+    padding-left: 10px;
+}

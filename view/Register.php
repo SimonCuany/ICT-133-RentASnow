@@ -9,14 +9,15 @@
 
 ob_start();
 ?>
-
-    <form action="index.php?action=TryLogin" method="post">
+    <form action="index.php?action=TryRegister" method="post">
         Name :
-        <input name="Name">
+        <input name="Namer">
         <br>
-        Password : <input name="password" type="password">
-        <button type="submit">Login</button>
+        Password : <input name="passwordr" type="password">
+        <button type="submit">Register</button>
     </form>
+
+
 <?php
 $content = ob_get_clean();
 require "view/gabarit.php"
