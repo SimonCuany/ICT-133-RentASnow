@@ -94,104 +94,104 @@
                             </li>
                         </ul>
                     </div>
-                    <?= $_SESSION['Name']?>
+                    <?= $_SESSION['Name'] ?>
                     <div id="id01" class="modal">
                     <span onclick="document.getElementById('id01').style.display='none'"
                           class="close" title="Close Modal">&times;</span>
 
 
-                        </div>
                     </div>
+            </div>
 
-                </nav>
+            </nav>
+
+        </div>
+    </div>
+
+    <div class="contentArea">
+        <div class="divPanel notop page-content">
+            <div class="row-fluid">
+                <div class="span12" id="divMain">
+                    <?= $content; ?>
+                </div>
+            </div>
+            <div id="footerInnerSeparator"></div>
+        </div>
+    </div>
+
+    <div id="footerOuterSeparator"></div>
+
+    <div id="divFooter" class="footerArea">
+        <div class="divPanel">
+            <div class="row">
+                <div class="col-4" id="footerArea1">
+                    <h3>Notre magasin</h3>
+                    <p>Nous sommes une équipe de jeunes snowboardeurs qui souhaitons faire découvrir cette
+                        discipline à
+                        tous les publics.</p>
+                    <p>
+                        <a href="#" title="Terms of Use">Terms of Use</a><br/>
+                        <a href="#" title="Privacy Policy">Privacy Policy</a><br/>
+                        <a href="#" title="FAQ">FAQ</a><br/>
+                        <a href="#" title="Sitemap">Sitemap</a>
+                    </p>
+                </div>
+
+                <div class="col-4" id="footerArea3">
+                    <h3>Horaires de location</h3>
+                    <p>Les locations peuvent s'effectuer tous les jours de la semaine en haute saison de 07h à 19h
+                        et en
+                        basse saison, les jours ouvrables de 8h à 18h.<br>
+                        Vous pouvez aussi passer par le site. Pour le retrait et le dépot, vous devrez passer au
+                        guichet
+                        automatique à l'arrière du magasin</p>
+                </div>
+
+                <div class="col-4" id="footerArea4">
+                    <h3>Contacts</h3>
+
+                    <ul id="contact-info">
+                        <li>
+                            <i class="general foundicon-phone icon"></i>
+                            <span class="field">Téléphone :</span>
+                            <br/>
+                            +41 27 890 12 34
+                        </li>
+                        <li>
+                            <i class="general foundicon-mail icon"></i>
+                            <span class="field">Email :</span>
+                            <br/>
+                            <a href="mailto:info@rentasnow.com" title="Email">info@rentasnow.com</a>
+                        </li>
+                        <li>
+                            <i class="general foundicon-home icon" style="margin-bottom:50px"></i>
+                            <span class="field">Addresse :</span>
+                            <br/>
+                            12 Rue de la Glisse<br/>
+                            2704 Sautons, Valais<br/>
+                            Suisse
+                        </li>
+                    </ul>
+                </div>
 
             </div>
-        </div>
+            <br/><br/>
 
-        <div class="contentArea">
-            <div class="divPanel notop page-content">
-                <div class="row-fluid">
-                    <div class="span12" id="divMain">
-                        <?= $content; ?>
-                    </div>
-                </div>
-                <div id="footerInnerSeparator"></div>
+            <div class="row text-center">
+                <div class="copyright">Copyright © 2019 Rent A Snow. All Rights Reserved.</div>
             </div>
-        </div>
-
-        <div id="footerOuterSeparator"></div>
-
-        <div id="divFooter" class="footerArea">
-            <div class="divPanel">
-                <div class="row">
-                    <div class="col-4" id="footerArea1">
-                        <h3>Notre magasin</h3>
-                        <p>Nous sommes une équipe de jeunes snowboardeurs qui souhaitons faire découvrir cette
-                            discipline à
-                            tous les publics.</p>
-                        <p>
-                            <a href="#" title="Terms of Use">Terms of Use</a><br/>
-                            <a href="#" title="Privacy Policy">Privacy Policy</a><br/>
-                            <a href="#" title="FAQ">FAQ</a><br/>
-                            <a href="#" title="Sitemap">Sitemap</a>
-                        </p>
-                    </div>
-
-                    <div class="col-4" id="footerArea3">
-                        <h3>Horaires de location</h3>
-                        <p>Les locations peuvent s'effectuer tous les jours de la semaine en haute saison de 07h à 19h
-                            et en
-                            basse saison, les jours ouvrables de 8h à 18h.<br>
-                            Vous pouvez aussi passer par le site. Pour le retrait et le dépot, vous devrez passer au
-                            guichet
-                            automatique à l'arrière du magasin</p>
-                    </div>
-
-                    <div class="col-4" id="footerArea4">
-                        <h3>Contacts</h3>
-
-                        <ul id="contact-info">
-                            <li>
-                                <i class="general foundicon-phone icon"></i>
-                                <span class="field">Téléphone :</span>
-                                <br/>
-                                +41 27 890 12 34
-                            </li>
-                            <li>
-                                <i class="general foundicon-mail icon"></i>
-                                <span class="field">Email :</span>
-                                <br/>
-                                <a href="mailto:info@rentasnow.com" title="Email">info@rentasnow.com</a>
-                            </li>
-                            <li>
-                                <i class="general foundicon-home icon" style="margin-bottom:50px"></i>
-                                <span class="field">Addresse :</span>
-                                <br/>
-                                12 Rue de la Glisse<br/>
-                                2704 Sautons, Valais<br/>
-                                Suisse
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-                <br/><br/>
-
-                <div class="row text-center">
-                    <div class="copyright">Copyright © 2019 Rent A Snow. All Rights Reserved.</div>
-                </div>
-                <div class="row text-center">
-                    <div class="social_bookmarks">
-                        <a href="#"><i class="social foundicon-facebook"></i> Facebook</a>
-                        <a href=""><i class="social foundicon-twitter"></i> Twitter</a>
-                        <a href="#"><i class="social foundicon-pinterest"></i> Pinterest</a>
-                        <a href="#"><i class="social foundicon-rss"></i> Rss</a>
-                    </div>
+            <div class="row text-center">
+                <div class="social_bookmarks">
+                    <a href="#"><i class="social foundicon-facebook"></i> Facebook</a>
+                    <a href=""><i class="social foundicon-twitter"></i> Twitter</a>
+                    <a href="#"><i class="social foundicon-pinterest"></i> Pinterest</a>
+                    <a href="#"><i class="social foundicon-rss"></i> Rss</a>
                 </div>
             </div>
         </div>
     </div>
-    <br/><br/><br/>
+</div>
+<br/><br/><br/>
 
 </body>
 </html>
