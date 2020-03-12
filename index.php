@@ -5,10 +5,9 @@
  * Date   : 09.01.2020
  * Time   : 11:47
  */
+
 session_start();
 $action = $_GET['action'];
-
-
 require "controler/controler.php";
 
 

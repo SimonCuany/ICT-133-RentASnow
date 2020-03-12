@@ -19,5 +19,5 @@ ob_start();
     </form>
 <?php
 $content = ob_get_clean();
-require "view/gabarit.php"
+
 ?>
