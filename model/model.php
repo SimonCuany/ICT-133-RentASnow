@@ -6,6 +6,7 @@
  * Time   : 15:29
  */
 
+
 function getPDO()
 {
     require ".constant.php";
@@ -14,11 +15,12 @@ function getPDO()
 
 }
 
+
 function getNews()
 {
     try {
         $dbh = getPDO();
-        $query = "SELECT * FROM news INNER JOIN users ON news.user_id = users.id;"; //initalise the Query variable and the commande to execute
+        $query = "SELECT * FROM news INNER JOIN users ON news.user_id = users.id ;"; //initalise the Query variable and the commande to execute
         $statement = $dbh->prepare($query);//Prepare Query
         $statement->execute();
         $queryResult = $statement->fetchAll(PDO::FETCH_ASSOC); //prepare result for client

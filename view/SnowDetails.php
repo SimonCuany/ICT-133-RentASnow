@@ -10,28 +10,8 @@
 ob_start();
 
 
+$product["id"] = $_GET["product"];
 
-
-    $product["id"] = $_GET["product"];
-
-    foreach ($snows as $snow) {
-    if ($snow["id"] == $product["id"]) {
-    $product = [
-
-    "name" => $snow["name"],
-    "marque" => $snow["marque"],
-    "Type" => $snow["Type"],
-    "Brand" => $snow["Brand"],
-    "image" => $snow["image"],
-    "bigimage" => $snow["bigimage"],
-    "description" => $snow["description"],
-    "dateretour" => $snow["dateretour"],
-    "disponible" => $snow["disponible"]
-    ];
-    }
-
-
-    }
 
 ob_start();
 ?>
@@ -41,7 +21,7 @@ ob_start();
     <div>
         <div class="container text-center">
             <h1 class="display-4 "><?= $product['name'] ?> </h1>
-            <img src="view/images/<?= $product['bigimage'] ?> " class="ditalissnow">
+            <img src="view/images/<?= $product['bigimage'] ?> ">
 
         </div>
     </div>
@@ -62,9 +42,9 @@ ob_start();
         <tr>
             <td class="text-center"> <?= $product['description'] ?></td>
             <td class="text-center"><?= $product['Type'] ?></td>
-            <?php if($product['disponible'] == false){
-                echo '<td class="text-center">'.date("d.m.Y", strtotime($product['dateretour']))."</td>";
-            } else{
+            <?php if ($product['disponible'] == false) {
+                echo '<td class="text-center">' . date("d.m.Y", strtotime($product['dateretour'])) . "</td>";
+            } else {
 
                 echo '<td class="text-center"> à definir </td>';
             }
@@ -76,7 +56,7 @@ ob_start();
 
         </tbody>
     </table>
-    <button type="button" class="btn btn-outline-dark"><a href="index.php?action=listSnows" >Retour</button>
+    <button type="button" class="btn btn-outline-dark"><a href="index.php?action=listSnows">Retour</button>
 
 <?php
 $content = ob_get_clean();

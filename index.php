@@ -32,7 +32,7 @@ switch ($action) {
         break;
     case "register";
         register();
-    break;
+        break;
     case "TryRegister":
         tryregister();
         break;

@@ -28,8 +28,7 @@ ob_start();
 
             <td>
                 <?= $onesnow['dateretour'];
-                if ($onesnow['dateretour'] == "")
-                {
+                if ($onesnow['dateretour'] == "") {
                     echo "A définir";
                 }
                 ?>
@@ -37,8 +36,7 @@ ob_start();
             <td>
                 <?php if ($onesnow['disponible'] == false) {
                     echo "Non";
-                }
-                else {
+                } else {
                     echo "Oui";
                 }
                 ?>
@@ -47,7 +45,9 @@ ob_start();
             <td>
                 <img src="<?= $onesnow['bigimage'] ?>" style="width: 150px ">
             </td>
-            <td><button type="button"><a href="index.php?action=DetailsSnow<?= $Snows['id']?>">Détails</button></td>
+            <td>
+                <button type="button"><a href="index.php?action=DetailsSnow<?= $Snows['id'] ?>">Détails</button>
+            </td>
 
         </tr>
         </tbody>
