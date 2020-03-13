@@ -33,6 +33,7 @@ function Details()
 
 function TryLogin()
 {
+
     if ($_POST["Name"] == "" && $_POST["password"] == "") {
         login();
         return;

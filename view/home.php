@@ -35,6 +35,7 @@ $title = "RentASnow - Accueil";
             <h4 class="col-4"><?= $onepieceofnews['title'] ?></h4>
         </div>
         <div class="row ml-5"><?= $onepieceofnews['text'] ?></div>
+        <div style="float: right"> Utilisateur : <?= $onepieceofnews['firstname']  ." " . $onepieceofnews['lastname']?></div>
     <?php } ?>
 </div>
 
