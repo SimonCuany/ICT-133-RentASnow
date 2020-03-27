@@ -24,8 +24,8 @@ $title = "RentASnow - Snows";
 
 <?php foreach ($snows as $onepieceofsnow) { $link=$_GET['link']; ?>
     <?php if ($onepieceofsnow['id']==1){echo "<h1>Nos Snowboards :</h1>";} ?>
-    <div class="case_snow">
-        <img src="view/images/Snows/<?= $onepieceofsnow['photo'] ?>" alt="">
+    <div class="case_snow" >
+        <img src="view/images/Snows/<?= $onepieceofsnow['photo'] ?>" alt="" class="flex-container">
         <h2>Marque : <?= $onepieceofsnow['brand'] ?></h2>
         <h2>Model : <?= $onepieceofsnow['model'] ?></h2>
         <h2>Longueur : <?= $onepieceofsnow['length'] ?></h2>

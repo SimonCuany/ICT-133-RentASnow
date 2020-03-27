@@ -18,3 +18,9 @@ a {
 .divMenuRight{
     margin-top: 55px;
 }
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: DodgerBlue;
+}
