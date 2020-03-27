@@ -10,3 +10,22 @@ function startCamera()
 $(document).ready( function() {
     startCamera()
 });
+
+
+var modal = document.getElementById('id01');
+
+
+var password = document.getElementById("idpassword")
+    , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+    if(password.value !== confirm_password.value) {
+        confirm_password.setCustomValidity("Passwords Don't Match");
+    } else {
+        confirm_password.setCustomValidity('');
+    }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+
