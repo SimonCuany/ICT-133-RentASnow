@@ -10,7 +10,8 @@ $title = "RentASnow - Accueil";
                 <div class="camera_caption fadeFromBottom cap1">Les derniers modèles toujours à disposition.</div>
             </div>
             <div data-src="view/images/slider/1.jpg">
-                <div class="camera_caption fadeFromBottom cap2">Découvrez des paysages fabuleux avec des sensations.</div>
+                <div class="camera_caption fadeFromBottom cap2">Découvrez des paysages fabuleux avec des sensations.
+                </div>
             </div>
             <div data-src="view/images/slider/2.jpg"></div>
         </div>
@@ -19,15 +20,15 @@ $title = "RentASnow - Accueil";
 </div>
 
 <!-- ________ NEWS _____________-->
-<div class="span12">
+<div class="span12"><br>
     <h1>Les news </h1>
     <?php foreach ($news as $onepieceofnews) { ?>
-        <div class="row mt-4">
-            <div class="col-2"><?= date('d.M.Y', strtotime($onepieceofnews['date'])) ?></div>
-            <h4 class="col-4"><?= $onepieceofnews['title'] ?></h4><br>
-            <h5 class="col-4"><?= $onepieceofnews['firstname']?></h5>
-        </div>
-        <div class="row ml-5"><?= $onepieceofnews['text'] ?></div>
+
+        <h4><?= $onepieceofnews['title'] ?></h4>
+        <h5><?= $onepieceofnews['firstname'] ?></h5>
+        <?= $onepieceofnews['text'] ?><br>
+        <?= date('d.M.Y', strtotime($onepieceofnews['date'])) ?>
+
     <?php } ?>
 
 </div>
