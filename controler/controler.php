@@ -15,11 +15,18 @@ function home()
     $news = getNews();
     require_once 'view/home.php';
 }
-function displaySnows()
+function displaySnows($id)
 {
-    $snows = getSnows();
+    $snowtypes=getSnowtypes();
     require_once 'view/displaySnows.php';
 }
+function displaytype($id){
+    $snowtype = getSnowtype($id);
+    $snows=getSnows($id);
+    require_once 'view/DisplayType.php';
+}
+
+
 function connect()
 {
     unset($_SESSION['username']);
@@ -34,9 +41,6 @@ function disconnect()
 }
 function tryLogin()
 {
-    /*email : elit@Aenean.net
-     * password: Holly
-     * */
     $users=getUsers();
     $username=$_POST['username'];
     $password=$_POST['password'];
@@ -57,8 +61,8 @@ function tryLogin()
 
 }
 function displaySnowsPlus(){
-    $snows = getSnows();
-    require_once 'view/displaySnowsPlus.php';
+    //$snows = getSnows();
+    require_once 'view/DisplayType.php';
 }
 function modifyfile()
 {

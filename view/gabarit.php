@@ -33,6 +33,7 @@
     <link href="http://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css">
 
     <link href="css/subtlepatterns/custom.css" rel="stylesheet" type="text/css"/>
+    <link href="css/cssinhtml.css" rel="stylesheet" type="text/css"/>
 
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>

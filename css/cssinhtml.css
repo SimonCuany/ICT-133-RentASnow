@@ -1,0 +1,11 @@
+.DSimg{
+    width: 200px;
+}
+.center{
+    text-align: center;
+}
+.link{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #4DB9EE;
+}

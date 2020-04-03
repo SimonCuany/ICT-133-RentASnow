@@ -18,11 +18,8 @@ function getNews()
     //return json_decode(file_get_contents("model/dataStorage/news.json"),true);
     return getNewsDB();
 }
-function getSnows()
-{
-    //return json_decode(file_get_contents("model/dataStorage/snows.json"),true);
-    return getSnowsDB();
-}
+
+
 function getUsers()
 {
     return getUsersDB();
@@ -49,13 +46,27 @@ function getUsersDB()
         return null;
     }
 }//get Users from the snows Database
-function getSnowsDB()
+function getSnows($id)
 {
     try {
         $dbh = getPDO();
-        $query = 'SELECT * FROM snows 
-                  left join snowtypes
-                  on snows.snowtype_id = snowtypes.id';
+        $query = 'SELECT * FROM snows
+                  WHERE snowtype_id=:id';
+        $statement = $dbh->prepare($query);//prepare query
+        $statement->execute(['id'=>$id]);//execute query
+        $queryResult = $statement->fetchAll();//prepare result for client
+        $dbh = null;
+        return $queryResult;
+    } catch (PDOException $e) {
+        print "Error!: " . $e->getMessage() . "<br/>";
+        return null;
+    }
+}//get Snows with snowstypes
+function getSnowtypes()
+{
+    try {
+        $dbh = getPDO();
+        $query = 'SELECT * FROM snowtypes';
         $statement = $dbh->prepare($query);//prepare query
         $statement->execute();//execute query
         $queryResult = $statement->fetchAll();//prepare result for client
@@ -65,7 +76,26 @@ function getSnowsDB()
         print "Error!: " . $e->getMessage() . "<br/>";
         return null;
     }
+}
+function getSnowtype($id)
+{
+    try {
+        $dbh = getPDO();
+        $query = 'SELECT * FROM snowtypes
+                    where id=:id';
+        $statement = $dbh->prepare($query);//prepare query
+        $statement->execute(['id'=> $id]);//execute query
+        $queryResult = $statement->fetch();//prepare result for client
+        $dbh = null;
+        return $queryResult;
+    } catch (PDOException $e) {
+        print "Error!: " . $e->getMessage() . "<br/>";
+        return null;
+    }
 }//get Snows with snowstypes
+
+
+
 function update($password,$id){
 
     try {
