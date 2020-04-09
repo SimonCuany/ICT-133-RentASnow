@@ -23,17 +23,7 @@ function writestatesnow($state)
     }
 
 }
-function writeavaliblesnow($state)
-{
-    switch ($state) {
-        case 0:
-            return "Disponible";
-            break;
-        case 1:
-            return "Indisponible";
-            break;
-    }
-}
+
 
 
 

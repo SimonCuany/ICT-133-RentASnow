@@ -8,7 +8,7 @@
 
 ob_start();
 $title = "RentASnow - Snows";
-var_dump($snowtype);
+
 echo "<img src=\"view/images/Snows/". $snowtype['photo']."\" width=\"152px\" alt=\"\">";
  foreach ($snows as $onepieceofsnow) { ?>
 
